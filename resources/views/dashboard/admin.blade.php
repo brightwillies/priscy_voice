@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Dashboard | PrissyVoice Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Pcgebenezer.com" name="description" />
+    <meta content="https://prissysvoice.com" name="description" />
     <meta content="" name="author" />
     <link rel="shortcut icon" href="/fassets/images/favicon.ico">
     <link href="/fassets/libs/min-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
