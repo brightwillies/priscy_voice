@@ -32,9 +32,9 @@
             <li>
                 <a  class="waves-effect" href="/dashboard/administrators">   <i class="mdi mdi-flip-horizontal"></i>administrators</a>
               </li>
-            <li>
+            <!-- <li>
                 <a  class="waves-effect" href="/dashboard/category">   <i class="mdi mdi-flip-horizontal"></i>Categories</a>
-              </li>
+              </li> -->
 
                 <li>
                   <a  class="waves-effect"  href="/dashboard/gallery">   <i class="mdi mdi-flip-horizontal"></i>Gallery</a>

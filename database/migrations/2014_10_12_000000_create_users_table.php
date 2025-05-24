@@ -34,7 +34,7 @@ class CreateUsersTable extends Migration
 
 
         DB::table('users')->insert([
-            'first_name' => 'Eduplatform',
+            'first_name' => 'PrissyVoice',
             'last_name' => 'Administrator',
             'email' => 'admin@prissysvoice.com',
             'mask' => \generate_mask(),
@@ -45,7 +45,7 @@ class CreateUsersTable extends Migration
         ]);
     }
 
-    /**
+    /**p
      * Reverse the migrations.
      *
      * @return void

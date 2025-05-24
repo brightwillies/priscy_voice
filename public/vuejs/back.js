@@ -60913,20 +60913,6 @@ var staticRenderFns = [
                     "a",
                     {
                       staticClass: "waves-effect",
-                      attrs: { href: "/dashboard/category" },
-                    },
-                    [
-                      _c("i", { staticClass: "mdi mdi-flip-horizontal" }),
-                      _vm._v("Categories"),
-                    ]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "waves-effect",
                       attrs: { href: "/dashboard/gallery" },
                     },
                     [
