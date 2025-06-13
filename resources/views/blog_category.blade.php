@@ -79,11 +79,11 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="banner-text d-flex justify-content-between">
-                                <h3>{{$category}}</h3>
+                                <!-- <h3>{{$category}}</h3> -->
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                      <li class="breadcrumb-item"><i class="flaticon-home"></i><a href="/">Home</a></li>
-                                      <li class="breadcrumb-item active" aria-current="page">{{$category}}</li>
+                                      <!-- <li class="breadcrumb-item"><i class="flaticon-home"></i><a href="/">Home</a></li> -->
+                                      <!-- <li class="breadcrumb-item active" aria-current="page">{{$category}}</li> -->
                                     </ol>
                                 </nav>
                             </div>
@@ -96,111 +96,14 @@
     </header>
     <!-- end header area -->
 
-    <!-- start side-menu area -->
-    <div class="side-menu-overlay"></div>
-    <div class="side-menu">
-        <!-- close button -->
-        <button class="sidemenu-close">
-            <i class="flaticon-plus"></i>
-        </button>
-        <!-- topic 1 -->
-        <div class="topic category">
-            <div class="single-item">
-                <div class="title">
-                    <h3>hot topics</h3>
-                </div>
-                <ul>
-                    <li>
-                        <a href="category.html" class="d-flex justify-content-between">
-                            <p>activity</p>
-                            <p>07</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="d-flex justify-content-between">
-                            <p>foody</p>
-                            <p>17</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="d-flex justify-content-between">
-                            <p>crazy</p>
-                            <p>07</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="d-flex justify-content-between">
-                            <p>gaming</p>
-                            <p>12</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="category.html" class="d-flex justify-content-between">
-                            <p>business</p>
-                            <p>20</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- topic 3 -->
-        <div class="topic feed mt-30">
-            <div class="single-item">
-                <div class="title">
-                    <h3>news feed</h3>
-                </div>
-                <ul class="small-item">
-                    <li class="media align-items-sm-center">
-                        <a href="blog-left.html">
-                            <img src="assets/images/author/fashion/img1.jpg" alt="News Image">
-                        </a>
-                        <div class="media-body">
-                            <a href="blog-right.html"><h6>This Place is Really Good for Reading</h6></a>
-                            <a href="#!" class="d-flex align-items-center"><p><i class="flaticon-calendar"></i>july 24, 2021</p></a>
-                        </div>
-                    </li>
-                    <li class="media mt-30 align-items-sm-center">
-                        <a href="blog-left.html">
-                            <img src="assets/images/author/fashion/img2.jpg" alt="News Image">
-                        </a>
-                        <div class="media-body">
-                            <a href="blog-right.html"><h6>Two Wheels are Best Than Four</h6></a>
-                            <a href="#!" class="d-flex align-items-center"><p><i class="flaticon-calendar"></i>july 24, 2021</p></a>
-                        </div>
-                    </li>
-                    <li class="media mt-30 align-items-sm-center">
-                        <a href="blog-left.html">
-                            <img src="assets/images/author/fashion/img3.jpg" alt="News Image">
-                        </a>
-                        <div class="media-body">
-                            <a href="blog-right.html"><h6>Put Yourself in Your Customers Shoe</h6></a>
-                            <a href="#!" class="d-flex align-items-center"><p><i class="flaticon-calendar"></i>july 24, 2021</p></a>
-                        </div>
-                    </li>
-                    <li class="media mt-30 align-items-sm-center">
-                        <a href="blog-left.html">
-                            <img src="assets/images/home1/recipe/rec5.jpg" alt="News Image">
-                        </a>
-                        <div class="media-body">
-                            <a href="blog-right.html"><h6>Helpful Tips for Work from Home </h6></a>
-                            <a href="#!" class="d-flex align-items-center"><p><i class="flaticon-calendar"></i>july 24, 2021</p></a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- topic 4 -->
-        <div class="topic feed mt-30">
-            <a href="#!" class="ad">
-                <img src="assets/images/author/ad/ad.jpg" alt="Advertise Image">
-            </a>
-        </div>
-    </div>
-    <!-- end side-menu area -->
+
 
     <!-- start main area -->
-    <section class="main p-80">
+    <section class="main p-30">
         <div class="container">
+            <div class="row">
+                <p style="font-style: italic; font-size:15px;"> {{$categoryText}}</p>
+            </div>
             <div class="row">
                 <!-- start left content area -->
                 <div class="col-lg-8 order-lg-0 order-1">

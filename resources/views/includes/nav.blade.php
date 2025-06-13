@@ -5,13 +5,14 @@
                                    <li  class="{{(request()->is('/')) ? 'active' : '' }}"><a href="/">Home </a></li>
                                    <li  class="{{(request()->is('categories/public-relations')) ? 'active' : '' }}"><a href="/categories/public-relations">Public Relations </a></li>
                                    <li class="{{(request()->is('categories/story-telling')) ? 'active' : '' }}"><a href="/categories/story-telling">⁠Story telling</a></li>
-                                   <li class="{{(request()->is('categories/globe-trotter')) ? 'active' : '' }}"><a href="/categories/globe-trotter">⁠Globe trotter</a></li>
-                                   <li class="{{(request()->is('categories/trends-insight')) ? 'active' : '' }}"><a href="/categories/trends-insight">⁠⁠Trends & Insight</a></li>
+                                   <li class="{{(request()->is('categories/voix-global-communications')) ? 'active' : '' }}"><a href="/categories/voix-global-communications">⁠ Voix Global Communications</a></li>
+                                   <li class="{{(request()->is('/categories/learn-a-language')) ? 'active' : '' }}" ><a href="/categories/learn-a-language">⁠Learn a new language</a></li>
+
 
                                        <li class="{{(request()->is('categories/voix-global-communications')) ? 'active' : '' }}"><a href="#!">More</a>
                                         <ul>
-                                            <li><a href="/categories/voix-global-communications">⁠ Global Communication</a></li>
-                                            <li><a href="/categories/learn-a-language">⁠Learn a foreign language</a></li>
+                                               <li class="{{(request()->is('categories/globe-trotter')) ? 'active' : '' }}"><a href="/categories/globe-trotter">⁠Globe trotter</a></li>
+                      <li class="{{(request()->is('categories/trends-insight')) ? 'active' : '' }}"><a href="/categories/trends-insight">⁠⁠Trends & Insight</a></li>
                                             <li><a href="/categories/others">⁠Others</a></li>
                                         </ul>
                                     </li>
