@@ -1,8 +1,13 @@
 
                         <nav class="navbar p-0">
+
+                         <a class="navbar-brand p-0" href="/">
+                                <img src="/assets/images/prissy_logo.png" width="83px" alt="Logo" />
+                            </a>
+
                             <div class="header-menu m-auto position-static">
                                 <ul class="menu">
-                                   <li  class="{{(request()->is('/')) ? 'active' : '' }}"><a href="/">Home </a></li>
+                                   <!-- <li  class="{{(request()->is('/')) ? 'active' : '' }}"><a href="/">Home </a></li> -->
                                    <li  class="{{(request()->is('categories/public-relations')) ? 'active' : '' }}"><a href="/categories/public-relations">Public Relations </a></li>
                                    <!-- <li class="{{(request()->is('categories/story-telling')) ? 'active' : '' }}"><a href="/categories/story-telling">⁠Story telling</a></li> -->
                                    <li class="{{(request()->is('categories/voix-global-communications')) ? 'active' : '' }}"><a href="/categories/voix-global-communications">⁠ Voix Global Communications</a></li>
@@ -12,7 +17,7 @@
                                        <li class="{{(request()->is('categories/voix-global-communications')) ? 'active' : '' }}"><a href="#!">More</a>
                                         <ul>
                                                    <li class="{{(request()->is('categories/story-telling')) ? 'active' : '' }}"><a href="/categories/story-telling">⁠Story telling</a></li>
-                
+
                                                <li class="{{(request()->is('categories/globe-trotter')) ? 'active' : '' }}"><a href="/categories/globe-trotter">⁠Globe trotter</a></li>
                                               <li class="{{(request()->is('categories/trends-insight')) ? 'active' : '' }}"><a href="/categories/trends-insight">⁠⁠Trends & Insight</a></li>
                                             <li><a href="/categories/others">⁠Others</a></li>

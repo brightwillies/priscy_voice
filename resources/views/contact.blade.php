@@ -31,9 +31,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <nav class="navbar p-0">
-                            <!-- <div class="logo">
-                                <a href="index.html"><img src="assets/images/author/logo.png" alt="Logo"></a>
-                            </div> -->
+                            <div class="logo">
+                                <a href="index.html"><img src="/assets/images/prissy_logo.png" alt="Logo"></a>
+                            </div>
                             <div class="header-menu m-auto position-static">
                               <ul class="menu">
                                    <li  class="{{(request()->is('/')) ? 'active' : '' }}"><a href="/">Home </a></li>
