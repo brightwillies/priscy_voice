@@ -45,8 +45,9 @@
 
                                        <li class="{{(request()->is('categories/voix-global-communications')) ? 'active' : '' }}"><a href="#!">More</a>
                                         <ul>
-                                               <li class="{{(request()->is('categories/globe-trotter')) ? 'active' : '' }}"><a href="/categories/globe-trotter">⁠Globe trotter</a></li>
-                                    <li class="{{(request()->is('categories/trends-insight')) ? 'active' : '' }}"><a href="/categories/trends-insight">⁠⁠Trends & Insight</a></li>
+                                            <li class="{{(request()->is('categories/story-telling')) ? 'active' : '' }}"><a href="/categories/story-telling">⁠Story telling</a></li>
+                                            <li class="{{(request()->is('categories/globe-trotter')) ? 'active' : '' }}"><a href="/categories/globe-trotter">⁠Globe trotter</a></li>
+                                            <li class="{{(request()->is('categories/trends-insight')) ? 'active' : '' }}"><a href="/categories/trends-insight">⁠⁠Trends & Insight</a></li>
                                             <li><a href="/categories/others">⁠Others</a></li>
                                         </ul>
                                     </li>
