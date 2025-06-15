@@ -220,11 +220,12 @@
 
                                     <!-- <p>On this blog, I share my journey in life, my thoughts on various aspects of public relations, telling stories, my experience as a young diplomat (globe trotter) my French journey and the benefits of learning a foreign language, explore the latest trends and insights about issues around us. With a few years in international relations and public relations, I’m excited to connect with like-minded individuals</p> -->
                                     <ul class="social d-flex justify-content-center">
-                                        <li><a href="#!"><i class="flaticon-facebook-2"></i></a></li>
-                                        <li><a href="#!"><i class="flaticon-twitter-1"></i></a></li>
-                                        <li><a href="#!"><i class="flaticon-instagram"></i></a></li>
-                                        <li><a href="#!"><i class="flaticon-skype"></i></a></li>
-                                    </ul>
+
+                                    <li><a href="https://x.com/pgyamwodie?s=11&t=lFn-0hFagGari_mtzvAp6A"><i class="flaticon-twitter-1"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/prisca-patience-gyamwodie-36353799?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="flaticon-linkedin"></i></a></li>
+                                    <li><a href="https://www.instagram.com/dziedzormfranks?igsh=MWc4dW1mOTV6M3hpdw%3D%3D&utm_source=qr"><i class="flaticon-instagram-2"></i></a></li>
+
+                       </ul>
                                 </div>
                             </div>
                         </div>

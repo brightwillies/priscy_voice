@@ -1,10 +1,8 @@
 <?php
 namespace App\Http\Controllers;
-
 use App\Models\Category;
-use App\Models\Event;
-use App\Models\Gallery;
 use App\Models\News;
+use Illuminate\Support\Str;
 
 class FrontendController extends Controller
 {
@@ -69,11 +67,11 @@ class FrontendController extends Controller
                 # code...
                 break;
         }
-          $title          = $category;
+          $title          = Str::upper( $category);
 
         $blogs = News::where('category_id', $CategoryId)->get();
 
-        return view('blog_category', compact('category', 'blogs', 'categoryText'));
+        return view('blog_category', compact('category', 'blogs', 'categoryText', 'title'));
     }
 
     public function singleBlog($id)

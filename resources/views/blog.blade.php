@@ -221,7 +221,7 @@
 
 
 
-                        <div class="share-blog d-flex justify-content-between">
+                        <!-- <div class="share-blog d-flex justify-content-between">
                             <div class="left-part media">
                                 <span>share : </span>
                                 <div class="media-body">
@@ -235,7 +235,7 @@
                             </div>
 
                         </div>
-                        <!-- comment part -->
+
                         <div class="comment">
                             <div class="title">
                                 <h3>Rrecent comments</h3>
@@ -260,7 +260,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- end left content area -->

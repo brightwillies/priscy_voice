@@ -42,9 +42,9 @@
                             <h3>Categories</h3>
                         </div>
                         <ul class="link">
-                            <li><a href="#!"><p>⁠⁠Trends & Insight</p></a></li>
-                            <li><a href="#!"><p>Global Communication</p></a></li>
-                            <li><a href="#!"><p>⁠Learn a foreign language</p></a></li>
+                            <li><a href="categories/trends-insight"><p>⁠⁠Trends & Insight</p></a></li>
+                            <li><a href="/categories/voix-global-communications"><p>Voix Global Communications</p></a></li>
+                            <li><a href="/categories/learn-a-language"><p>⁠⁠Learn a new language</p></a></li>
 
                         </ul>
                     </div>
@@ -54,9 +54,15 @@
                         </div>
 
                         <ul class="social d-flex">
-                            <li><a href="#!"><i class="flaticon-facebook-1"></i></a></li>
-                            <li><a href="#!"><i class="flaticon-twitter"></i></a></li>
+                            <!-- <li><a href="#!"><i class="flaticon-"></i></a></li>
+                            <li><a href="https://x.com/pgyamwodie?s=11&t=lFn-0hFagGari_mtzvAp6A"><i class="flaticon-twitter"></i></a></li>
                             <li><a href="#!"><i class="flaticon-instagram-2"></i></a></li>
+ -->
+
+                                    <li><a href="https://x.com/pgyamwodie?s=11&t=lFn-0hFagGari_mtzvAp6A"><i class="flaticon-twitter-1"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/prisca-patience-gyamwodie-36353799?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="flaticon-linkedin"></i></a></li>
+                                    <li><a href="https://www.instagram.com/dziedzormfranks?igsh=MWc4dW1mOTV6M3hpdw%3D%3D&utm_source=qr"><i class="flaticon-instagram-2"></i></a></li>
+
                         </ul>
                     </div>
                 </div>
