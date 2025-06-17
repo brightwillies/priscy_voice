@@ -46,7 +46,7 @@
     <!--==== responsive css ====-->
     <link rel="stylesheet" href="/assets/css/responsive.css">
     <title>{{$title ?? 'No title'}} - Blog  </title>
-
+   <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
 

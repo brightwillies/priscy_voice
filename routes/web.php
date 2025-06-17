@@ -29,7 +29,8 @@ Route::get('/blogs', [FrontendController::class, 'blogs'])->name('blogs');
 Route::get('/blog/{id}', [FrontendController::class, 'singleBlog']);
 
 
-
+Route::post('/comments/{blog}', [FrontendController::class, 'storeComment'])->name('comments.store');
+Route::post('/likes/{blog}', [FrontendController::class, 'toggleLike'])->name('likes.toggle');
 
 Route::get('/events/{id}', [FrontendController::class, 'singleEvent']);
 Route::get('/gallery', [FrontendController::class, 'gallery']);

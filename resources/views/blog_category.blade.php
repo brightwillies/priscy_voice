@@ -31,7 +31,7 @@
                     <div class="col-lg-4 col-md-4">
                         <div class="left-part">
                             <ul class="d-flex">
-                             
+
 
                                     <li><a href="https://x.com/pgyamwodie?s=11&t=lFn-0hFagGari_mtzvAp6A"><i class="flaticon-twitter-1"></i></a></li>
                                     <li><a href="https://www.linkedin.com/in/prisca-patience-gyamwodie-36353799?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="flaticon-linkedin"></i></a></li>
@@ -103,14 +103,17 @@
     <!-- start main area -->
     <section class="main p-30">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <p style="font-style: italic; font-size:15px;"> {{$categoryText}}</p>
-            </div>
+            </div> -->
             <div class="row">
                 <!-- start left content area -->
                 <div class="col-lg-8 order-lg-0 order-1">
                     <div class="content left-content">
                         <ul class="all-item">
+                    <li class="item media align-items-center mt-30">
+                        <p style="font-style: italic; font-size:15px;"> {{$categoryText}}</p>
+                    </li>
 
                                 @foreach($blogs as $key =>$singleBlog)
                             <li class="item media align-items-center mt-30">
@@ -150,7 +153,25 @@
                 <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0 order-lg-1 order-0">
                     <div class="content right-content">
                         <!-- topic 1 -->
-                        <div class="topic about text-center">
+                            <div class="topic category">
+                        <div class="title text-center">
+                           <h3>categories</h3>
+                        </div>
+
+                         <ul>
+                           @foreach($categories as $key =>$singleCategory)
+                           <li>
+                              <a href="/categories/{{$singleCategory->mask}}" class="d-flex justify-content-between">
+                                 <p>{{$singleCategory->name}}</p>
+                                 <p> {{$singleCategory->count}}</p>
+                              </a>
+                           </li>
+                           @endforeach
+                        </ul>
+                         </div>
+                         <!-- topic 1 -->
+
+                        <div class="topic about text-center   mt-30">
                             <div class="image">
                                     <img src="/assets/images/founder.png" alt="Author Image">
                                 </div>
@@ -159,6 +180,9 @@
 
                         </div>
                         <!-- topic 2 -->
+
+
+
 
 
                     </div>

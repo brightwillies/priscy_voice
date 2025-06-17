@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,8 +8,25 @@ class News extends Model
 {
     use HasFactory;
 
-    protected $appends = ['mon', 'day','category', 'year'];
+    protected $appends = ['comments', 'mon', 'day', 'category', 'year'];
 
+    public function likes()
+    {
+        return $this->hasMany(likes::class);
+    }
+
+    public function likeCount()
+    {
+        return $this->likes()->count();
+    }
+
+    public function getCommentsAttribute()
+    {
+
+        $comments = Comment::where('news_id', $this->attributes['id'])->get();
+
+        return $this->attributes['comments'] = $comments;
+    }
 
     public function getCategoryAttribute()
     {
@@ -27,32 +43,29 @@ class News extends Model
     public function getDayAttribute()
     {$endDate = '';
         if ($this->attributes['date']) {
-            $mydate = $this->attributes['date'];
+            $mydate  = $this->attributes['date'];
             $endDate = date('j', strtotime($mydate));
         }
 
-        return $this->attributes['day'] = $endDate;
-    }
+        return $this->attributes['day'] = $endDate;}
     public function getMonAttribute()
     {$endDate = '';
 
         if ($this->attributes['date']) {
-            $mydate = $this->attributes['date'];
+            $mydate  = $this->attributes['date'];
             $endDate = date('M', strtotime($mydate));
         }
 
-        return $this->attributes['mon'] = $endDate;
-    }
+        return $this->attributes['mon'] = $endDate;}
     public function getYearAttribute()
     {$endDate = '';
 
         if ($this->attributes['date']) {
 
-            $mydate = $this->attributes['date'];
+            $mydate  = $this->attributes['date'];
             $endDate = date('Y', strtotime($mydate));
             // $endDate = date('l, F jS, Y', strtotime($mydate));
         }
 
-        return $this->attributes['year'] = $endDate;
-    }
+        return $this->attributes['year'] = $endDate;}
 }
