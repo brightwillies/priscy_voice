@@ -24,6 +24,42 @@
     <!-- start header area -->
     <header>
 
+     <section class="top-menu">
+            <div class="container">
+                <div class="row align-items-center position-static">
+                    <!-- left-part -->
+                    <div class="col-lg-4 col-md-4">
+                        <div class="left-part">
+                            <ul class="d-flex">
+
+
+                                    <li><a href="https://x.com/pgyamwodie?s=11&t=lFn-0hFagGari_mtzvAp6A"><i class="flaticon-twitter-1"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/prisca-patience-gyamwodie-36353799?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="flaticon-linkedin"></i></a></li>
+                                    <li><a href="https://www.instagram.com/dziedzormfranks?igsh=MWc4dW1mOTV6M3hpdw%3D%3D&utm_source=qr"><i class="flaticon-instagram-2"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- logo-part -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 text-center mid-part">
+                        <!-- <div class="logo">
+                            <a href="index.html"><img src="assets/images/author/logo.png" alt="Logo"></a>
+                        </div> -->
+                    </div>
+                    <!-- right-part -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 position-static">
+                        <div class="right-part position-static">
+                            <ul class="d-flex justify-content-end position-static align-items-center">
+
+                                <!-- <li><button class="sidemenu-btn"><i class="flaticon-menu"></i></button></li> -->
+                            </ul>
+                            <!-- Modal -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- start menubar area -->
         <section class="menubar">
@@ -31,9 +67,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <nav class="navbar p-0">
-                            <div class="logo">
-                                <a href="index.html"><img src="/assets/images/prissy_logo.png" alt="Logo"></a>
-                            </div>
+                             <a class="navbar-brand p-0" href="/">
+                                <img src="/assets/images/prissy_logo.png" width="83px" alt="Logo" />
+                            </a>
                             <div class="header-menu m-auto position-static">
                               <ul class="menu">
                                    <li  class="{{(request()->is('/')) ? 'active' : '' }}"><a href="/">Home </a></li>
