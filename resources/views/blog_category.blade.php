@@ -112,7 +112,7 @@
                     <div class="content left-content">
                         <ul class="all-item">
                     <li class="item media align-items-center mt-30">
-                        <p style="font-style: italic; font-size:15px;"> {{$categoryText}}</p>
+                        <p style="font-style: italic; font-size:15px;     text-align: justify;  text-justify: inter-word; }"> {{$categoryText}}</p>
                     </li>
 
                                 @foreach($blogs as $key =>$singleBlog)
