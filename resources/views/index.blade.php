@@ -46,12 +46,13 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-7 col-sm-6">
                                     <div class="banner-text">
-                                        <h4> Public Relations</h4>
-                                        <h1>In a world driven by perception,</h1>
-                                        <p>  mastering the art of Public Relations is key to shaping powerful narratives</p>
+                                        <!-- <h4> Public Relations</h4> -->
+                                        <h1>OWN YOUR VOICE</h1>
+                                        <p> It is your trump card to credibility, uniqueness, authenticity, integrity , reputation and brand image.
+Own your voice today !</p>
                                         <ul class="buttons d-flex">
                                             <li>
-                                                <a href="about.html" class="btn-style">read more</a>
+                                                <a href="/contact-us" class="btn-style">Contact Us</a>
                                             </li>
 
                                         </ul>
