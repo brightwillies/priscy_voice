@@ -49,7 +49,7 @@
                                         <!-- <h4> Public Relations</h4> -->
                                         <h1>OWN YOUR VOICE</h1>
                                         <p> It is your trump card to credibility, uniqueness, authenticity, integrity , reputation and brand image.
-Own your voice today !</p>
+                                            Own your voice today !</p>
                                         <ul class="buttons d-flex">
                                             <li>
                                                 <a href="/contact-us" class="btn-style">Contact Us</a>
@@ -72,10 +72,19 @@ Own your voice today !</p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-7 col-sm-6">
                                     <div class="banner-text">
-                                        <h4>Storytelling</h4>
+                                        <!-- <h4>Storytelling</h4>
                                         <h1>Every brand </h1>
-                                       <p>every journey, every moment has a story—let’s explore how to tell yours in the most compelling way.</p>
+                                       <p>every journey, every moment has a story—let’s explore how to tell yours in the most compelling way.</p> -->
 
+                                        <h1>OWN YOUR VOICE</h1>
+                                        <p> It is your trump card to credibility, uniqueness, authenticity, integrity , reputation and brand image.
+                                            Own your voice today !</p>
+                                        <ul class="buttons d-flex">
+                                            <li>
+                                                <a href="/contact-us" class="btn-style">Contact Us</a>
+                                            </li>
+
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -92,10 +101,19 @@ Own your voice today !</p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-7 col-sm-6">
                                     <div class="banner-text">
-                                       <h4>Learn A Language</h4>
+                                       <!-- <h4>Learn A Language</h4>
                                         <h1>Unlock new cultures,</h1>
-                                        <p>  opportunities, and connections by mastering the beauty of languages."</p>
+                                        <p>  opportunities, and connections by mastering the beauty of languages."</p> -->
 
+                                         <h1>OWN YOUR VOICE</h1>
+                                        <p> It is your trump card to credibility, uniqueness, authenticity, integrity , reputation and brand image.
+                                            Own your voice today !</p>
+                                        <ul class="buttons d-flex">
+                                            <li>
+                                                <a href="/contact-us" class="btn-style">Contact Us</a>
+                                            </li>
+
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
