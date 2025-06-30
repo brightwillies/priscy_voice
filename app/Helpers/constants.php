@@ -22,10 +22,8 @@ define('SUCCESS_DELETING_MESSAGE', 'The record was successfully deleted');
 define('SUCCESS_IMAGE_DELETING_MESSAGE', 'The image has been successfully deleted');
 
 //folder name
-define('ST_CATEGORY_FOLDER', 'assets/categories');
-define('ST_PRODUCTS_FOLDER', 'assets/products');
-define('ST_BRANDS_FOLDER', 'assets/brands');
-define('ST_WEB_IMAGE_SLIDER_FOLDER', 'assets/homesliders/web');
+
+define('ST_MEDIA', 'assets/media');
 define('ST_IMAGES', 'assets/sysimages');
 define('ST_GALLERY', 'assets/gallery');
 define ('ST_EVENTS', 'assets/events');

@@ -64,6 +64,10 @@ import Category from "./pages/Category.vue";
 import Sidebar from "./pages/Sidebar.vue";
 import Blogs from "./pages/Blogs.vue";
 import Blog from "./pages/Blog.vue";
+
+import Newgallery from "./pages/Newgallery.vue";
+
+
 Vue.component('sidebar', Sidebar);
 Vue.prototype.$churchusername = localStorage.getItem('thoracicadminusername');
 import Embed from 'v-video-embed'
@@ -108,8 +112,6 @@ const router = new VueRouter({
                 component: Category
             },
 
-
-
             {
                 path: "blogs",
                 name: "blogs",
@@ -121,6 +123,11 @@ const router = new VueRouter({
                 name: "newBlog",
                 component: Blog
             },
+            {
+                path: "media-files",
+                name: "newGallery",
+                component: Newgallery
+            },
 
             {
                 path: "blog/:id",
@@ -128,7 +135,7 @@ const router = new VueRouter({
                 component: Blog
             },
 
-           
+
         ]
     }
     ]

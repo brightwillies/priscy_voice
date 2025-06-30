@@ -36,11 +36,14 @@
                 <a  class="waves-effect" href="/dashboard/category">   <i class="mdi mdi-flip-horizontal"></i>Categories</a>
               </li> -->
 
-                <li>
+                <!-- <li>
                   <a  class="waves-effect"  href="/dashboard/gallery">   <i class="mdi mdi-flip-horizontal"></i>Gallery</a>
+                </li> -->
+                <li>
+                  <a  class="waves-effect"  href="/dashboard/media-files">   <i class="mdi mdi-flip-horizontal"></i>Media Files</a>
                 </li>
                 <li>
-                  <a  class="waves-effect"  href="/dashboard/events">   <i class="mdi mdi-flip-horizontal"></i>events</a>
+                  <!-- <a  class="waves-effect"  href="/dashboard/events">   <i class="mdi mdi-flip-horizontal"></i>events</a> -->
                   <a  class="waves-effect"  href="/dashboard/blogs">   <i class="mdi mdi-flip-horizontal"></i>Blogs</a>
                   <a  class="waves-effect"  href="/dashboard/new-blog">   <i class="mdi mdi-flip-horizontal"></i>New Blog</a>
                 </li>
