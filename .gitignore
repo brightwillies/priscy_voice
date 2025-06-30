@@ -6,6 +6,7 @@
 /assets/news
 /assets/leaders
 /assets/events
+/assets/media
 /vendor
 .env
 .env.backup
