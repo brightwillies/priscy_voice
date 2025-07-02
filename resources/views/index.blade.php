@@ -166,7 +166,8 @@
           @if($findCategories->count() > 0)
                         @foreach($findCategories as $key =>$singleCategory)
 
-            <div class="row justify-content-center">
+            <!-- <div class="row justify-content-center"> -->
+            <div class="row">
                 <div class="col-lg-12">
                 <div class="send">
                     <div class="content">
