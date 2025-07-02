@@ -13,7 +13,7 @@ class News extends Model
 
     public function likes()
     {
-        return $this->hasMany(ikes::class);
+        return $this->hasMany(Likes::class);
     }
 
     public function likeCount()
