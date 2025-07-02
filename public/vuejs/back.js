@@ -7918,6 +7918,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -61373,6 +61375,36 @@ var render = function () {
                           ),
                         ]),
                         _vm._v(" "),
+                        _c("div", { staticClass: "row text-center" }, [
+                          _c("div", { staticClass: "col-lg-12" }, [
+                            _c(
+                              "button",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: !_vm.editmode,
+                                    expression: "!editmode",
+                                  },
+                                ],
+                                staticClass: "btn btn-primary pl-10 pr-10",
+                                attrs: { type: "Submit", title: "Submit" },
+                                on: {
+                                  click: function ($event) {
+                                    return _vm.saveRecord()
+                                  },
+                                },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                                    Save Media Files\n                                                "
+                                ),
+                              ]
+                            ),
+                          ]),
+                        ]),
+                        _vm._v(" "),
                         _c(
                           "viewer",
                           {
@@ -61393,9 +61425,11 @@ var render = function () {
                                 }),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "details" }, [
-                                  _c("h5", [
-                                    _vm._v(_vm._s(image.filename) + " "),
-                                  ]),
+                                  _c(
+                                    "p",
+                                    { staticStyle: { "font-size": "12px" } },
+                                    [_vm._v(_vm._s(image.filename) + " ")]
+                                  ),
                                 ]),
                                 _vm._v(" "),
                                 _c("span", {
@@ -61418,62 +61452,6 @@ var render = function () {
                       1
                     ),
                   ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row text-center" }, [
-                _c("div", { staticClass: "col-lg-12" }, [
-                  _c(
-                    "button",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: !_vm.editmode,
-                          expression: "!editmode",
-                        },
-                      ],
-                      staticClass: "btn btn-primary pl-10 pr-10",
-                      attrs: { type: "Submit", title: "Submit" },
-                      on: {
-                        click: function ($event) {
-                          return _vm.saveRecord()
-                        },
-                      },
-                    },
-                    [
-                      _vm._v(
-                        "\n                                    Save Gallery Details\n                                "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.editmode,
-                          expression: "editmode",
-                        },
-                      ],
-                      staticClass: "btn btn-primary pl-10 pr-10",
-                      attrs: { type: "Submit", title: "Submit" },
-                      on: {
-                        click: function ($event) {
-                          return _vm.updateRecord()
-                        },
-                      },
-                    },
-                    [
-                      _vm._v(
-                        "\n                                    update Gallery Details\n                                "
-                      ),
-                    ]
-                  ),
                 ]),
               ]),
             ]),

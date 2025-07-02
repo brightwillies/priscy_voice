@@ -71,7 +71,7 @@
                                                             <div class="details">
                                                                 <span class="size"
                                                                     v-text="getFileSize(files[index].size)"></span>
-                                                                   <span class="name" v-text="files[index].name"></span>
+                                                                <span class="name" v-text="files[index].name"></span>
                                                                 <!-- <h4 v-on:click="removeImage(index)" style="color: red">
                                                                     X
                                                                 </h4> -->
@@ -84,11 +84,24 @@
                                             </div>
 
 
+                                            <div class="row text-center">
+                                                <div class="col-lg-12">
+                                                    <button v-show="!editmode" @click="saveRecord()" type="Submit"
+                                                        class="btn btn-primary pl-10 pr-10" title="Submit">
+                                                        Save Media Files
+                                                    </button>
+                                                    <!-- <button v-show="editmode" @click="updateRecord()" type="Submit"
+                                                        class="btn btn-primary pl-10 pr-10" title="Submit">
+                                                        update  Details
+                                                    </button> -->
+                                                </div>
+                                            </div>
                                             <viewer class="row" :images="oldimages">
-                                                <div class="col-lg-4 col-md-3" v-for="image in oldimages" :key="image.id">
+                                                <div class="col-lg-4 col-md-3" v-for="image in oldimages"
+                                                    :key="image.id">
                                                     <img :src="image.path" class="previmg" />
                                                     <div class="details">
-                                                        <h5>{{image.filename}} </h5>
+                                                        <p style="font-size: 12px;">{{ image.filename }} </p>
                                                     </div>
                                                     <span style="color: red" class="fa fa-trash"
                                                         v-on:click="showRemovePreviewImageModal(image)"></span>
@@ -99,18 +112,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row text-center">
-                                <div class="col-lg-12">
-                                    <button v-show="!editmode" @click="saveRecord()" type="Submit"
-                                        class="btn btn-primary pl-10 pr-10" title="Submit">
-                                        Save Gallery Details
-                                    </button>
-                                    <button v-show="editmode" @click="updateRecord()" type="Submit"
-                                        class="btn btn-primary pl-10 pr-10" title="Submit">
-                                        update Gallery Details
-                                    </button>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -348,13 +350,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.media-thumbnail{
+.media-thumbnail {
     height: 300px;
     width: 300px;
     border: 2px solid red;
     background: red;
 }
+
 .previmg {
     padding-right: 2px;
     width: 100%;
