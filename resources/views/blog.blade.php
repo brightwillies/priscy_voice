@@ -136,7 +136,7 @@
                      </div>
                      <div class="comment">
                         <div class="title">
-                           <h3>Rrecent comments</h3>
+                           <h3>Recent comments</h3>
                         </div>
                         <ul class="all-comment">
                            @foreach($blog->comments as $comment)
