@@ -112,7 +112,7 @@
                                  @csrf
                                  <button type="submit" class="btn-like">
                                  <i class="flaticon-like"></i>
-                                 <!-- <span>{{ $blog->likes->count() }}</span> likes -->
+                                 <span>{{ $blog->likes->count() }}</span> likes
                                  </button>
                               </form>
                            </li>

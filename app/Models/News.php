@@ -3,7 +3,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\likes;
+use App\Models\Likes;
 use App\Models\Comment;
 class News extends Model
 {
@@ -13,7 +13,7 @@ class News extends Model
 
     public function likes()
     {
-        return $this->hasMany(likes::class);
+        return $this->hasMany(ikes::class);
     }
 
     public function likeCount()
