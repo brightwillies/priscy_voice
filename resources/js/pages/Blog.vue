@@ -55,12 +55,31 @@
                             <input required v-model="form.date" type="date" id="name" name="group-a[0][untyped-input]"
                                 class="form-control" />
                         </div>
+
+
+
                         <div class="form-group">
-                            <label for="name">Blooog</label> <br />
+                            <label class="d-block">Status</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="example-radios-inline1"
+                                    name="example-radios-inline" value="1" v-model="form.status" checked="" />
+                                <label id="labelalign" class="form-check-label"
+                                    for="example-radios-inline1">Published</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="example-radios-inline2"
+                                    name="example-radios-inline" value="0" v-model="form.status" />
+                                <label id="labelalign" class="form-check-label"
+                                    for="example-radios-inline2">Unpublished</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Bloog</label> <br />
                             <!-- <vue-editor   useCustomImageHandler v-model="form.summary" :editorToolbar="customToolbar"
                                 @image-click="openMediaLibrary"></vue-editor> -->
 
-                                <vue-editor v-model="form.summary" :editorToolbar="customToolbar" ref="editor"></vue-editor>
+                            <vue-editor v-model="form.summary" :editorToolbar="customToolbar" ref="editor"></vue-editor>
                         </div>
                         <button class="btn btn-primary btn-block mb-3" type="submit">
                             <span v-show="!editmode">Add Blog</span>
@@ -108,7 +127,7 @@
                                 <div v-for="(image, index) in mediaLibrary" :key="index" class="col-md-4 mb-10">
                                     <div class="media-thumbnail" @click="selectMedia(image.path)">
                                         <img :src="image.path" class="img-fluid media-item" :alt="image.name">
-                                        <span>{{image.filename}}</span>
+                                        <span>{{ image.filename }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -150,7 +169,7 @@ export default {
                 [{ header: [1, 2, 3, 4, 5, 6, false] }],
                 ["bold", "italic", "underline", "strike"],
                 ["blockquote", "code-block"],
-                  ['link', 'video', 'formula'],
+                ['link', 'video', 'formula'],
                 [{ list: "ordered" }, { list: "bullet" }],
                 [{ script: "sub" }, { script: "super" }],
                 [{ indent: "-1" }, { indent: "+1" }],
@@ -176,7 +195,7 @@ export default {
                 category_id: "",
                 featured_image: "",
                 mask: "",
-                status: "",
+                status: "1",
             }),
         };
     },
@@ -247,6 +266,7 @@ export default {
             formData.append("category_id", this.form.category_id);
             formData.append("introduction", this.form.introduction);
             formData.append("date", this.form.date);
+            formData.append("status", this.form.status);
             formData.append("featured_image", this.form.featured_image);
 
             axios
@@ -275,6 +295,7 @@ export default {
             formData.append("summary", this.form.summary);
             formData.append("category_id", this.form.category_id);
             formData.append("date", this.form.date);
+            formData.append("status", this.form.status);
             formData.append("featured_image", this.form.featured_image);
 
             axios
@@ -315,7 +336,7 @@ export default {
         showMedialModal() {
             $("#mediaLibraryModal").modal("show");
         },
-       openMediaLibrary() {
+        openMediaLibrary() {
             // Store the editor instance and cursor location
             const quill = this.$refs.editor.quill;
             this.editorInstance = quill;
@@ -348,19 +369,16 @@ export default {
 
 <style lang="scss" scoped>
 .media-item {
-  cursor: pointer;
-  border: 1px solid #eee;
-  border-radius: 2px;
-  overflow: hidden;
-  transition: all 0.2s;
-  padding : 10px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.2s;
+    padding: 10px;
 }
 
 .media-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
-
-
 </style>

@@ -14,9 +14,9 @@ class FrontendController extends Controller
     public function home()
     {
         $title          = 'Home';
-        $latestBlogs    = News::select('*')->orderBy('date', 'DESC')->take(3)->get();
+        $latestBlogs    = News::select('*')->where('status', 1)->orderBy('date', 'DESC')->take(3)->get();
         $findCategories = Category::all()->filter(function ($singleCategory) {
-            $blogs = News::where('category_id', $singleCategory->id)->take(3)->get();
+            $blogs = News::where('category_id', $singleCategory->id)->where('status', 1)->take(3)->get();
             if ($blogs->isNotEmpty()) {
                 $singleCategory->blogs = $blogs;
                 return true; // Keep this category
@@ -73,7 +73,7 @@ class FrontendController extends Controller
         }
         $title = Str::upper($category);
 
-        $blogs = News::where('category_id', $CategoryId)->get();
+        $blogs = News::where('category_id', $CategoryId)->where('status', 1)->get();
 
         return view('blog_category', compact('category', 'blogs', 'categoryText', 'title',  'categories'));
     }
@@ -83,7 +83,7 @@ class FrontendController extends Controller
 
         $title      = 'Blog';
         $blog       = News::where('mask', $id)->first();
-        $otherBlogs = News::where('mask', '<>', $id)->take(5)->get();
+        $otherBlogs = News::where('mask', '<>', $id)->where('status', 1)->take(5)->get();
 
         $categories = Category::all();
         return view('blog', compact('title', 'blog', 'otherBlogs', 'categories'));

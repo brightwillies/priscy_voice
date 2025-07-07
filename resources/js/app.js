@@ -63,9 +63,11 @@ import Admin from "./pages/Admin.vue";
 import Category from "./pages/Category.vue";
 import Sidebar from "./pages/Sidebar.vue";
 import Blogs from "./pages/Blogs.vue";
+// import Blogs from "./pages/Blogs.vue";
 import Blog from "./pages/Blog.vue";
-
+import UnpublishedBlogs from  "./pages/UnpublishedBlogs.vue";
 import Newgallery from "./pages/Newgallery.vue";
+import BlogComments from "./pages/BlogComments.vue";
 
 
 Vue.component('sidebar', Sidebar);
@@ -113,8 +115,13 @@ const router = new VueRouter({
             },
 
             {
-                path: "blogs",
-                name: "blogs",
+                path: "unpublished-blogs",
+                name: "unpublishedBlogs",
+                component: UnpublishedBlogs
+            },
+            {
+                path: "published-blogs",
+                name: "publishedBlogs",
                 component: Blogs
             },
 
@@ -133,6 +140,11 @@ const router = new VueRouter({
                 path: "blog/:id",
                 name: "viewBlog",
                 component: Blog
+            },
+            {
+                path: "blog-comments/:id",
+                name: "viewComment",
+                component: BlogComments
             },
 
 

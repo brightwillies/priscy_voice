@@ -9,7 +9,19 @@ class News extends Model
 {
     use HasFactory;
 
-    protected $appends = ['comments', 'mon', 'day', 'category', 'year'];
+    protected $appends = ['comments', 'status_name', 'mon', 'day', 'category', 'year'];
+
+        public function getStatusNameAttribute()
+    {
+        $statusName = '';
+        $getStatus = $this->status;
+        if ($getStatus == 0) {
+            $statusName = 'Unpublished';
+        } elseif ($getStatus == 1) {
+            $statusName = 'Published';
+        }
+        return $this->attributes['status_name'] = $statusName;
+    }
 
     public function likes()
     {

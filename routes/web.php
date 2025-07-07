@@ -46,3 +46,4 @@ Route::get('/dashboard/event/{any?}', [DashboardController::class, 'index']);
 Route::get('/dashboard/event-registrants/{any}', [DashboardController::class, 'index']);
 Route::get('/dashboard/event-details/{any?}', [DashboardController::class, 'index']);
 Route::get('/dashboard/blog/{any?}', [DashboardController::class, 'index']);
+Route::get('/dashboard/blog-comments/{any?}', [DashboardController::class, 'index']);

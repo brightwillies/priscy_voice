@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Api\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\News;
+use App\Models\Comment;
 use App\Traits\ResponseTrait;
 use Exception;
 use Illuminate\Http\Request;
@@ -15,7 +16,12 @@ class NewsController extends Controller
 
     public function index()
     {
-        $getRecords = News::select('*')->orderBy('date', 'DESC')->get();
+        $getRecords = News::select('*')->where('status', 1)->orderBy('date', 'DESC')->get();
+        return $this->successResponse('', $getRecords);
+    }
+    public function unpublishedIndex()
+    {
+        $getRecords = News::select('*')->where('status', 0)->orderBy('date', 'DESC')->get();
         return $this->successResponse('', $getRecords);
     }
 
@@ -40,6 +46,7 @@ class NewsController extends Controller
         $newRecord->category_id  = $request->category_id;
         $newRecord->date         = $request->date;
         $newRecord->summary      = $request->summary;
+        $newRecord->status       = $request->status;
         $newRecord->introduction = $request->introduction;
         $webImage                = $request->file('featured_image');
         if ($webImage) {
@@ -70,6 +77,17 @@ class NewsController extends Controller
         }
         return $this->successResponse('', $newRecord);
     }
+    public function blogComments($id)
+    {
+        return $newRecord = News::where('id', $id)->first();
+        if (! $newRecord) {
+            return $this->errorResponse('Resource not found');
+        }
+
+        $findComments        = Comment::where('news_id', $newRecord->id)->get();
+        $newRecord->comments = findComments;
+        return $this->successResponse('', $newRecord);
+    }
 
     public function update(Request $request, $id)
     {
@@ -93,6 +111,7 @@ class NewsController extends Controller
             $newRecord->summary      = $request->summary;
             $newRecord->category_id  = $request->category_id;
             $newRecord->introduction = $request->introduction;
+            $newRecord->status       = $request->status;
             $webImage                = $request->file('featured_image');
             if ($webImage) {
                 $uploadResult = uploadItemImage($webImage, $request->title, ST_NEWS);
@@ -119,6 +138,15 @@ class NewsController extends Controller
     public function destroy($id)
     {
         $newRecord = News::where('mask', $id)->first();
+        if (! $newRecord) {
+            return $this->errorResponse('Resource not found');
+        }
+        $newRecord->delete();
+        return $this->successResponse('Record Deleted Successfully');
+    }
+    public function deleteComment($id)
+    {
+        $newRecord = Comment::where('id', $id)->first();
         if (! $newRecord) {
             return $this->errorResponse('Resource not found');
         }

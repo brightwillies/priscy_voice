@@ -57,7 +57,7 @@
                                         <th>Status</th>
                                         <th>Edit</th>
                                         <th>Delete</th>
-                                        <th>Comments</th>
+                                         <th>Comments</th>
                                     </tr>
                                 </thead>
 
@@ -83,7 +83,7 @@
                                                 <i class="bx bx-trash-alt"></i>
                                             </button>
                                         </td>
-                                        <td>
+                                          <td>
                                             <router-link :to="{
                                                 name: 'viewComment',
                                                 params: { id: singleItem.id },
@@ -319,7 +319,7 @@ export default {
 
         getRecords() {
             axios
-                .get("/api/v1/admin/blog")
+                .get("/api/v1/admin/unplublished-blogs")
                 .then(({ data }) => {
                     this.tableData = data.data;
                     this.initDatatable();

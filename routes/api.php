@@ -65,6 +65,16 @@ Route::group(['prefix' => 'v1'], function () {
         }
         );
 
+        Route::group(['prefix' => 'unplublished-blogs'], function () {
+            Route::get('/', [NewsController::class, 'unpublishedIndex']);
+        }
+        );
+        Route::group(['prefix' => 'blog-comment'], function () {
+            Route::get('/{id}', [NewsController::class, 'blogComments']);
+            Route::delete('/{id}', [NewsController::class, 'deleteComment']);
+        }
+        );
+
         Route::group(['prefix' => 'media-files'], function () {
             Route::get('/', [ImageController::class, 'indexMultiples']);
             Route::post('/', [ImageController::class, 'storeMultiples']);
