@@ -119,7 +119,9 @@
                         </ul>
                      </div>
                      <h3>{{$blog->title}} </h3>
+                      <div class="text-align: justify;  text-justify: inter-word;"> 
                      <p  style="text-align: justify;  text-justify: inter-word;" class="desc justify-content-between">{!!$blog->summary !!}  </p>
+                    </div>
                      <div class="share-blog d-flex justify-content-between">
                         <div class="left-part media">
                            <span>share : </span>
