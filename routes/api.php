@@ -75,6 +75,9 @@ Route::group(['prefix' => 'v1'], function () {
         }
         );
 
+        Route::patch('comments/{comment}/toggle-status', [NewsController::class, 'toggleStatus']);
+
+        
         Route::group(['prefix' => 'media-files'], function () {
             Route::get('/', [ImageController::class, 'indexMultiples']);
             Route::post('/', [ImageController::class, 'storeMultiples']);

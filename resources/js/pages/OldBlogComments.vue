@@ -4,13 +4,20 @@
             <!-- start page title -->
             <div class="row">
                 <div class="col-12">
-                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <div class="
+                page-title-box
+                d-flex
+                align-items-center
+                justify-content-between
+              ">
                         <h4 class="page-title mb-0 font-size-18">Blog & Comments</h4>
+
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item">
                                     <a href="/dashboard">Dashboard</a>
                                 </li>
+                                <!-- <li class="breadcrumb-item active">Blog</li> -->
                             </ol>
                         </div>
                     </div>
@@ -18,17 +25,26 @@
             </div>
             <!-- end page title -->
             <div data-repeater-list="group-a">
+
                 <div class="card">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label for="name">Title</label>
-                                    <input readonly v-model="form.title" type="text" id="name"
-                                        name="group-a[0][untyped-input]" class="form-control" />
-                                </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="name">Title</label>
+                                <input readonly v-model="form.title" type="text" id="name"
+                                    name="group-a[0][untyped-input]" class="form-control" />
                             </div>
                         </div>
+                        <!-- <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="name">Title</label>
+                                <input required v-model="form.introduction" type="text" id="name"
+                                    name="group-a[0][untyped-input]" class="form-control" />
+                            </div>
+                        </div> -->
+
+                    </div>
                     </div>
                 </div>
             </div>
@@ -36,49 +52,40 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap">
+                            <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap" style="
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    width: 100%;
+                  ">
                                 <thead>
                                     <tr>
-                                        <th>Comment</th>
-                                        <th>Status</th>
-                                        <th>Actions</th>
+                                        <th>Comments</th>
+                                        <th>Delete</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr v-for="singleItem in comments" :key="singleItem.id">
                                         <td>{{ singleItem.content }}</td>
+
                                         <td>
-                                            <span :class="['badge', singleItem.status === 'visible' ? 'badge-success' : 'badge-danger']">
-                                                {{ singleItem.status }}
-                                            </span>
+                                            <button class="btn" type="button" @click="showDeleteModal(singleItem)">
+                                                <i class="bx bx-trash-alt"></i>
+                                            </button>
                                         </td>
-                                        <td>
-                                            <div class="btn-group" role="group">
-                                                <button
-                                                    class="btn btn-sm"
-                                                    type="button"
-                                                    @click="toggleCommentStatus(singleItem)"
-                                                    :class="singleItem.status === 'visible' ? 'btn-warning' : 'btn-success'"
-                                                    :title="singleItem.status === 'visible' ? 'Hide Comment' : 'Show Comment'"
-                                                >
-                                                    <i :class="singleItem.status === 'visible' ? 'bx bx-hide' : 'bx bx-show'"></i>
-                                                    {{ singleItem.status === 'visible' ? 'Hide' : 'Show' }}
-                                                </button>
-                                                <button class="btn btn-sm btn-danger" type="button" @click="showDeleteModal(singleItem)">
-                                                    <i class="bx bx-trash-alt"></i>
-                                                </button>
-                                            </div>
-                                        </td>
+
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+                <!-- end col -->
             </div>
         </div>
 
-        <!-- Delete Modal -->
+
+
         <div id="deleteRecordModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
             aria-labelledby="mySmallModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -107,7 +114,9 @@
                         </button>
                     </div>
                 </div>
+                <!-- /.modal-content -->
             </div>
+            <!-- /.modal-dialog -->
         </div>
     </div>
 </template>
@@ -129,20 +138,24 @@ export default {
     data() {
         return {
             customToolbar: [
-                ["bold", "italic", "underline", "strike"],
+                ["bold", "italic", "underline", "strike"], // toggled buttons
                 ["blockquote", "code-block"],
-                [{ header: 1 }, { header: 2 }],
+
+                [{ header: 1 }, { header: 2 }], // custom button values
                 [{ list: "ordered" }, { list: "bullet" }],
-                [{ script: "sub" }, { script: "super" }],
-                [{ indent: "-1" }, { indent: "+1" }],
-                [{ direction: "rtl" }],
+                [{ script: "sub" }, { script: "super" }], // superscript/subscript
+                [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+                [{ direction: "rtl" }], // text direction
                 ["image", "code-block"],
-                [{ size: ["small", false, "large", "huge"] }],
+                [{ size: ["small", false, "large", "huge"] }], // custom dropdown
                 [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                [{ color: [] }, { background: [] }],
+
+                [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+                // [{ color: [] }, { background: ["#FEEECE", "#FEF8D3", "#FEFCEF"] }], // dropdown with defaults from theme
                 [{ font: [] }],
                 [{ align: [] }],
-                ["clean"],
+
+                ["clean"], // remove formatting button
             ],
 
             selectedItem: "",
@@ -166,6 +179,8 @@ export default {
         if (this.$route.params.id) {
             this.getRecord();
         }
+        // this.getRecords();
+        //    alert('Bright');
     },
 
     methods: {
@@ -235,37 +250,8 @@ export default {
             $("#deleteRecordModal").modal("show");
         },
 
-        // New method to toggle comment status
-        toggleCommentStatus(comment) {
-            const newStatus = comment.status === 'visible' ? 'hidden' : 'visible';
 
-            axios
-                .patch(`/api/v1/admin/comments/${comment.id}/toggle-status`, {
-                    status: newStatus
-                })
-                .then(({ data }) => {
-                    if (data.success) {
-                        // Update the comment status in the local array
-                        const index = this.comments.findIndex(c => c.id === comment.id);
-                        if (index !== -1) {
-                            this.comments[index].status = newStatus;
-                        }
 
-                        // Show success message
-                        this.$toasted.show(`Comment status updated to ${newStatus}`, {
-                            type: 'success',
-                            duration: 3000
-                        });
-                    }
-                })
-                .catch((error) => {
-                    console.error("Error toggling comment status:", error);
-                    this.$toasted.show('Failed to update comment status', {
-                        type: 'error',
-                        duration: 3000
-                    });
-                });
-        },
 
         deleteRecord() {
             var vm = this;
@@ -284,9 +270,7 @@ export default {
 
                             if (res.code === 200) {
                                 this.successToastReloadPage(res.message);
-                                // Remove deleted comment from the list
-                                this.comments = this.comments.filter(comment => comment.id !== this.selectedItem.id);
-                                $("#deleteRecordModal").modal("hide");
+                            } else {
                             }
                         }
                     },
@@ -296,41 +280,15 @@ export default {
                             error.response.data.errors.forEach((element) => {
                                 vm.$toasted.show(element);
                             });
+                            // alert(error.response.status);
                         }
                     }
                 );
         },
+
+
     },
 };
 </script>
 
-<style lang="scss" scoped>
-.badge {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-.badge-success {
-    background-color: #28a745;
-    color: white;
-}
-
-.badge-danger {
-    background-color: #dc3545;
-    color: white;
-}
-
-.btn-group .btn {
-    margin-right: 0.25rem;
-}
-
-.btn-group .btn:last-child {
-    margin-right: 0;
-}
-
-.btn-sm {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-}
-</style>
+<style lang="scss" scoped></style>

@@ -154,4 +154,30 @@ class NewsController extends Controller
         return $this->successResponse('Record Deleted Successfully');
     }
 
+public function toggleStatus(Request $request, $id)
+    {
+        $comment = Comment::findOrFail($id);
+
+        $validator = Validator::make($request->all(), [
+            'status' => 'required|in:visible,hidden',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'errors' => $validator->errors()
+            ], 422);
+        }
+
+        $comment->status = $request->status;
+        $comment->save();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Comment status updated successfully',
+            'data' => $comment
+        ]);
+    }
+
+
 }

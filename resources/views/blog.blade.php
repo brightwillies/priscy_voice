@@ -104,7 +104,7 @@
                            </li>
                            <li>
                               <a href="#!">
-                                 <p><i class="flaticon-chat"></i>comments ( {{count($blog->comments)}})</p>
+                                 <p><i class="flaticon-chat"></i>comments ( {{count($blog->lomments)}})</p>
                               </a>
                            </li>
                            <li>
@@ -119,7 +119,7 @@
                         </ul>
                      </div>
                      <h3>{{$blog->title}} </h3>
-                      <div style="text-align: justify;  text-justify: inter-word;"> 
+                      <div style="text-align: justify;  text-justify: inter-word;">
                      <p  style="text-align: justify;  text-justify: inter-word;" class="desc justify-content-between">{!!$blog->summary !!}  </p>
                     </div>
                      <div class="share-blog d-flex justify-content-between">
@@ -141,7 +141,7 @@
                            <h3>Recent comments</h3>
                         </div>
                         <ul class="all-comment">
-                           @foreach($blog->comments as $comment)
+                           @foreach($blog->lomments as $comment)
                            <li>
                               <div class="comment-body">
                                  <a href="author.html">

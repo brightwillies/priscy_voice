@@ -9,7 +9,7 @@ class News extends Model
 {
     use HasFactory;
 
-    protected $appends = ['comments', 'status_name', 'mon', 'day', 'category', 'year'];
+    protected $appends = ['comments', 'lomments', 'status_name', 'mon', 'day', 'category', 'year'];
 
         public function getStatusNameAttribute()
     {
@@ -39,6 +39,13 @@ class News extends Model
         $comments = Comment::where('news_id', $this->attributes['id'])->get();
 
         return $this->attributes['comments'] = $comments;
+    }
+    public function getLommentsAttribute()
+    {
+
+        $comments = Comment::where('news_id', $this->attributes['id'])->where('status', 'visible')->get();
+
+        return $this->attributes['lomments'] = $comments;
     }
 
     public function getCategoryAttribute()
